@@ -4,10 +4,10 @@ Nagios Compliant check for PFSense Firewall appliances - Checks CPU, Memory, Dis
 
 # Examples
 
-Check Memory Usage
+Check Memory/Swap Usage
 ```
-./check_pfsense.sh -H 192.168.1.1 -C public -m memory -w 80 -c 90
-MEMORY OK - Usage: 10% (Swap: 0%) | memory=10%;80;90 swap=0%;80;90
+./check_pfsense.sh -H 192.168.1.1 -C public -m memory -w 80,30 -c 90,50
+MEMORY OK - Usage: 10% (Swap: 0%) | memory=10%;80;90 swap=0%;30;50
 ```
 Check CPU Usage
 ```
